@@ -1,0 +1,36 @@
+/* 
+	MAIN COLORS:
+	#2e9e37
+	#2e9e5c
+	#6f2e9e
+	#9e2e5d
+	#666
+	#000
+*/
+
+html, body {
+	height: 100%;
+}
+
+#main-page {
+	height: 100%;
+	background: url(/static/images/main-bg.jpg) no-repeat center top;
+}
+
+#main-form {
+	background: #fff;
+	border:1px solid #fff;
+	margin-top: 15%;
+
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+			border-radius: 10px;
+}
+
+#register {
+	margin-top: 10%;
+}
+
+#login {
+	margin-top: 12%;
+}
