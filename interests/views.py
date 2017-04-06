@@ -43,6 +43,7 @@ def create_new_interest(request):
 
 		if new_interest.is_valid():
 			new_interest.save()
+			return HttpResponseRedirect('/')
 
 		else:
 			print(new_interest.errors)
