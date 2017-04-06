@@ -12,26 +12,31 @@
 						&nbsp;
 					</div>
 					<div class="col-lg-4">
-						<div class="col-lg-4">
-							<img src="http://placehold.it/75x75" alt="">
+						<div class="col-lg-4 text-right">
+							<div class="username">{{ user.username }}</div>
 						</div>
-						<div class="col-lg-8">
-							<span>Hello {{ user.username }}</span>
-							<div class="user-menu">
-								<ul>
-									<li>
-										Add category
-									</li>
-									<li>
-										Change profile
-									</li>
-									<li>
-										<a class="btn btn-success btn-lg" href="/logout/">Logout</a>										
-									</li>
-								</ul>
+						<div class="col-lg-2">
+							{% if user.userprofile.avatar == '' %}
+								<img class="avatar" src="{% static 'images/default_avatar.png' %}" alt="">
+							{% else %}
+								<img class="avatar" src="/media/{{ user.userprofile.avatar }}" alt="">
+							{% endif %}
+						</div>
+						<div class="col-lg-6 text-left dropdown">
+<!-- 							<button class="dropbtn">
+ -->								<img class="dropbtn" src="{% static 'images/triangle.png' %}" alt="">
+<!-- 							</button>
+ -->							<div class="dropdown-content">
+								<a href="">Add category</a>
+								<a href="">Change profile</a>
+								<a href="/logout/">Log out</a>
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="col-lg-offset-2 col-lg-8">
+					<img src="http://placehold.it/30x30" alt="">
+					<input type="text" name="serach">
 				</div>
 				<!-- <div class="col-lg-8 col-lg-offset-2">
 					<h1>Hello {{ user.username }}!</h1>
