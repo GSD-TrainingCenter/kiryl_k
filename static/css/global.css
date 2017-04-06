@@ -104,3 +104,22 @@ html, body {
 
 .dropdown:hover .dropbtn {
 }
+
+#search-bar {
+	margin-top: 20px;
+}
+
+#search-bar > img {
+	width: 30px;
+	height: 30px;
+}
+
+#search-bar > input {
+	font-size: 24px;
+
+	padding: 0 15px;
+
+	-webkit-border-radius: 25px;
+	   -moz-border-radius: 25px;
+			border-radius: 25px;
+}

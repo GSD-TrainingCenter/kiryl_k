@@ -15,3 +15,7 @@ class UserProfileForm(forms.ModelForm):
 		model = UserProfile
 		fields = ('fb_accaount', 'avatar')
 		
+class CreateNewInterest(forms.ModelForm):
+	class Meta:
+		model = Interest
+		fields = ('name', 'description')

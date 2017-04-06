@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 
-from .forms import UserForm, UserProfileForm
+from .forms import UserForm, UserProfileForm, CreateNewInterest
 
 # Create your views here.
 def register(request):
@@ -35,6 +35,22 @@ def register(request):
 		profile_form = UserProfileForm()
 
 	return render(request, 'interests/register.html', {'user_form': user_form, 'profile_form': profile_form, 'registered': registered} )
+
+
+def create_new_interest(request):
+	if request.method == 'POST':
+		new_interest = CreateNewInterest(data=request.POST)
+
+		if new_interest.is_valid():
+			new_interest.save()
+
+		else:
+			print(new_interest.errors)
+
+	else:
+		new_interest = CreateNewInterest
+
+	return render(request, 'interests/newinterest.html', {'new_interest': new_interest})
 
 
 def user_login(request):

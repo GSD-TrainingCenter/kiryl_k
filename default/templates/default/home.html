@@ -23,10 +23,8 @@
 							{% endif %}
 						</div>
 						<div class="col-lg-6 text-left dropdown">
-<!-- 							<button class="dropbtn">
- -->								<img class="dropbtn" src="{% static 'images/triangle.png' %}" alt="">
-<!-- 							</button>
- -->							<div class="dropdown-content">
+ 							<img class="dropbtn" src="{% static 'images/triangle.png' %}" alt="">
+ 							<div class="dropdown-content">
 								<a href="">Add category</a>
 								<a href="">Change profile</a>
 								<a href="/logout/">Log out</a>
@@ -35,13 +33,11 @@
 					</div>
 				</div>
 				<div class="col-lg-offset-2 col-lg-8">
-					<img src="http://placehold.it/30x30" alt="">
-					<input type="text" name="serach">
+					<div id="search-bar">
+						<img src="{% static 'images/search-loop.png' %}" alt="">
+						<input type="text" name="serach">
+					</div>	
 				</div>
-				<!-- <div class="col-lg-8 col-lg-offset-2">
-					<h1>Hello {{ user.username }}!</h1>
-					<a class="btn btn-success btn-lg" href="/logout/">Logout</a>
-				</div> -->
 			</div>
 		</div>
 	{% else %}
