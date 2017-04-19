@@ -5,9 +5,11 @@ from django.contrib.auth.models import User
 class Interest(models.Model):
 	name = models.CharField(max_length=100)
 	description = models.TextField(blank=True)
+	users = models.ManyToManyField(User)
 
 	def __str__(self):
 		return self.name
+
 
 class UserProfile(models.Model):
 	user = models.OneToOneField(User)

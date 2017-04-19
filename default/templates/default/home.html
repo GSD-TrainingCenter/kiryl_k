@@ -38,6 +38,11 @@
 						<input type="text" name="serach">
 					</div>	
 				</div>
+				<div class="col-lg-12">
+					{% for item in interests %}
+						<h1>{{ item.name }}</h1>
+					{% endfor %}
+				</div>
 			</div>
 		</div>
 	{% else %}
@@ -47,8 +52,8 @@
 					<div id="main-form" class="col-lg-8 col-lg-offset-2">
 						<div class="row">
 							<div class="col-lg-8 col-lg-offset-2 text-center">
-								<a href="/register/" class="btn btn-primary btn-lg">Register</a>
 								<a href="/login/" class="btn btn-primary btn-lg">Log in</a>	
+								<a href="/register/" class="btn btn-primary btn-lg">Register</a>
 							</div>
 						</div>
 					</div>
