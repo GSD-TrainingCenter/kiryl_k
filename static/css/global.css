@@ -101,6 +101,10 @@ html, body {
 .dropdown:hover .dropbtn {
 }
 
+.user-interests {
+	border: solid 1px #000;
+}
+
 #search-bar {
 	margin-top: 20px;
 }
