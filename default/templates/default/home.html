@@ -43,13 +43,15 @@
 				<div class="col-lg-8">
  					<div id="search-bar">
 						<img src="{% static 'images/search-loop.png' %}" alt="">
-						<input type="text" name="serach">
+						<input type="text" id="search-box" onkeyup="myFunction()" name="serach" placeholder="Search...">
 					</div>
 					<div class="col-lg-12 text-left">
 						{% if interests %}
+							<ul id="myUL">
 							{% for item in interests %}
-								<h3>{{ item.name }}</h3>
+								<li><h3>{{ item.name }}</h3></li>
 							{% endfor %}
+							</ul>
 						{% endif %}
 					</div>	
 				</div>
@@ -71,4 +73,22 @@
 			</div>
 		</div>
 	{% endif %}
+	<script charset="utf-8">
+	function myFunction() {
+		let input, filter, ul, li, h3, i;
+		input = document.getElementById('search-box');
+		filter = input.value.toUpperCase();
+		ul = document.getElementById('myUL');
+		li = ul.getElementsByTagName('li');
+
+		for (i = 0; i < li.length; i++) {
+			h3 = li[i].getElementsByTagName('h3')[0];
+			if (h3.innerHTML.toUpperCase().indexOf(filter) > -1) {
+				li[i].style.display = "";
+			} else {
+				li[i].style.display = "none";
+			}
+		}
+	}
+	</script>
 {% endblock %}
