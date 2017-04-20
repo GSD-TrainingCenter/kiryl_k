@@ -49,7 +49,7 @@
 						{% if interests %}
 							<ul id="myUL">
 							{% for item in interests %}
-								<li><h3>{{ item.name }}</h3></li>
+								<li><a href="/interest/{{ item.url }}">{{ item.name }}</a></li>
 							{% endfor %}
 							</ul>
 						{% endif %}
