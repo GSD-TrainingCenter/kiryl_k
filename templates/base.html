@@ -4,14 +4,13 @@
 	{% load static %}
 	<meta charset="UTF-8">
 	<title>Project for AT&T Training Center</title>
-	<link rel="stylesheet" type="text/css" href="{% static "css/global.css"%} ">
+ 	<script src="{% static "js/jquery-1.11.3.min.js" %}"></script>
+ 	<script src="{% static "js/chat.js" %}"></script>
+ 	<link rel="stylesheet" type="text/css" href="{% static "css/global.css"%} ">
 	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css"%}">
-	<link rel="stylesheet" type="text/css" href="{% static "js/chat.js"%}">
-	<link rel="stylesheet" href="{% static "js/jquery-3.2.1.min.js" %}">
 </head>
 <body>
 	{% block content %}
 	{% endblock %}
 </body>
-	<script src="{% static "js/chat.js" %}"></script>
 </html>
