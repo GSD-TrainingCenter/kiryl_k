@@ -75,15 +75,15 @@
 	{% endif %}
 	<script charset="utf-8">
 	function myFunction() {
-		let input, filter, ul, li, h3, i;
+		let input, filter, ul, li, a, i;
 		input = document.getElementById('search-box');
 		filter = input.value.toUpperCase();
 		ul = document.getElementById('myUL');
 		li = ul.getElementsByTagName('li');
 
 		for (i = 0; i < li.length; i++) {
-			h3 = li[i].getElementsByTagName('h3')[0];
-			if (h3.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			a = li[i].getElementsByTagName('a')[0];
+			if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
 				li[i].style.display = "";
 			} else {
 				li[i].style.display = "none";

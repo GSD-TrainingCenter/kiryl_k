@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-	YEAH!!!!
+	{% for item in interest %}
+		<p>{{ item.name }}</p>
+		<p>{{ item.description }}</p>
+	{% endfor %}
+	CHAT WILL BE HERE!
+	<a href="/"><- Back to main page</a>
 {% endblock %}

@@ -1,1 +1,6 @@
 1. When create new interest, include user which create this interest.
+2. Same parts of code put into separate file.
+3. Finish chat box.
+4. Add styles to the whole project.
+5. Add comments to whole project.
+6. Put all scripts in separate files.

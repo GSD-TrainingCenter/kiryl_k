@@ -26,16 +26,16 @@ def home(request):
 
 def interest(request, interest_name_url):
 	interest_name = interest_name_url.replace('_', ' ')
-	context = {
-		'interest_name': interest_name,
-	}
+	# context = {
+	# 	'interest_name': interest_name,
+	# }
 
-	try:
-		interest = Interest.objects.get(name=interest_name)
-		pages = Page.objects.filter(interest=interest)
-		context['pages'] = pages
-		context['interest'] = interest
-	except Interest.DoesNotExist:
-		pass
+	interest = Interest.objects.filter(name=interest_name).values('name', 'description')
+	# description = Interest.objects.filter(name=interest_name).values('description')
+
+	context = {
+		'interest': interest,
+		# 'description': description
+	}
 
 	return render(request, 'default/interest.html', context)
