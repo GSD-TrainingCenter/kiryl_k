@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'default',
     'interests',
+    'chat',
 ]
 
 MIDDLEWARE = [
