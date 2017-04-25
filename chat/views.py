@@ -11,7 +11,7 @@ def chat(request):
 
 def post(request):
     if request.method == "POST":
-        msg = request.POST.get('msgbox', None)
+        msg = request.POST.get('chat-msg', None)
         c = Chat(user=request.user, message=msg)
         if msg != '':
             c.save()
