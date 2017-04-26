@@ -15,7 +15,7 @@ class Interest(models.Model):
 class UserProfile(models.Model):
 	user = models.OneToOneField(User)
 
-	fb_accaount = models.URLField(blank=True)
+	fb_account = models.URLField(blank=True)
 	avatar = models.ImageField(upload_to='profile_images', blank=True)
 
 	def __str__(self):

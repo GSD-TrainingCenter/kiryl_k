@@ -1,24 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
 	{% if registered %}
-		<strong>Thank you for registering!</strong>
-		<a href="/">Home page</a>
-	
+		<div class="container-fluid text-center">
+			<strong>Thank you for registering!</strong>
+			<a 
+				class="btn btn-success" 
+				href="/" 
+				style="display:block;width:20%;margin:5% auto;"
+			>
+				Home page
+			</a>	
+		</div>
 	{% else %}
 		<div id="register" class="continer-fluid text-center">
 			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<h2>Register here!</h2>
-
-					<form id="user_profile" method="post" action="/register/" enctype="multipart/form-data">
-						{% csrf_token %}
-						
-						<div class="from-group">
+				<div class="col-lg-12 text-center">
+					<h2 id="reg-title">Registration</h2>
+					<form id="user-profile" method="post" action="/register/" enctype="multipart/form-data">
+						{% csrf_token %}						
+						<div class="form-group">
 							{{ user_form.as_p }}
 							{{ profile_form.as_p }}	
 						</div>
-
-						<input type="submit" name="submit" value="Register" />
+						<input type="submit" name="submit" value="Register" class="btn btn-primary"/>
 					</form>
 				</div>
 			</div>

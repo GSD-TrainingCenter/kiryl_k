@@ -13,7 +13,7 @@ class UserForm(forms.ModelForm):
 class UserProfileForm(forms.ModelForm):
 	class Meta:
 		model = UserProfile
-		fields = ('fb_accaount', 'avatar')
+		fields = ('fb_account', 'avatar')
 		
 class CreateNewInterest(forms.ModelForm):
 	class Meta:

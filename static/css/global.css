@@ -10,6 +10,11 @@
 
 html, body {
 	height: 100%;
+	background: url(/static/images/bg.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+  	   -moz-background-size: cover;
+  		 -o-background-size: cover;
+			background-size: cover;
 }
 
 #main-page {
@@ -19,14 +24,6 @@ html, body {
 
 #main-form {
 	margin-top: 17%;
-}
-
-#register {
-	margin-top: 10%;
-}
-
-#login {
-	margin-top: 12%;
 }
 
 #navbar {
@@ -122,4 +119,36 @@ html, body {
 	-webkit-border-radius: 25px;
 	   -moz-border-radius: 25px;
 			border-radius: 25px;
+}
+
+#login_form {
+	margin-top: 12%;
+}
+
+#login_form input {
+	margin: 0 auto;
+	width: 50%;
+}
+
+#login_form label {
+	font-size: 36px;
+}
+
+#user-profile {
+	margin-top: 5%;
+}
+
+#reg-title {
+	margin-top: 5%;
+	font-size: 36px;
+}
+
+#id_username,
+#id_email,
+#id_password,
+#id_fb_account,
+#id_avatar {
+	margin: 0 auto;
+	display: block;
+	width: 35%;
 }

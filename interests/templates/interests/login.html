@@ -2,8 +2,7 @@
 {% block content %}
 	<div id="login" class="container-fluid text-center">
 		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
-				<h1>Login</h1>
+			<div class="col-lg-12 text-center">
 				<form id="login_form" method="post" action="/login/">
 					{% csrf_token %}
 					<div class="from-group">
@@ -15,10 +14,13 @@
 					 	<input id="password" type="password" name="password" value="" class="form-control" size="50">
 					</div>
 					<br>
-					<button type="submit" class="btn btn-primary">Login</button>
+					<button type="submit" class="btn btn-primary">Log In</button>
 				</form>
+			</div>
+			<div class="col-lg-12 text-center">
+				<h2>OR</h2>
+				<a href="/register/" class="btn btn-success">Sign Up</a>
 			</div>
 		</div>
 	</div>
-
 {% endblock %}
