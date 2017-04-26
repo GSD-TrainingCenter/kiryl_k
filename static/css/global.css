@@ -173,3 +173,29 @@ html, body {
 	display: block;
 	width: 35%;
 }
+
+.home-title {
+	color: #666;
+}
+
+#myUL{
+	list-style-type: none;
+}
+
+#myUL li {
+	margin: 20px 0;
+}
+
+#myUL a{
+	background: rgba(46, 158, 92, 0.5);
+	border-radius: 10px;
+	color: #6f2e9e;
+	font-size: 20px;
+	padding: 10px;
+}
+
+#myUL a:hover {
+	background: rgba(46, 158, 55, 1);
+	color: #9e2e5d;
+	text-decoration: none;
+}
