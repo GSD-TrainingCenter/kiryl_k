@@ -15,6 +15,9 @@ def home(request):
 
 	user_interests_list = Interest.objects.filter(users=request.user).order_by('name')
 
+	for interest in user_interests_list:
+		interest.url = interest.name.replace(' ', '_')
+
 	context = {
 		'interests': interests_list,
 		'user_interests': user_interests_list,
