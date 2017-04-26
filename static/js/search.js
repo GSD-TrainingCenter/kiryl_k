@@ -3,13 +3,13 @@ function myFunction() {
 	input = document.getElementById('search-box');
 	filter = input.value.toUpperCase();
 	ul = document.getElementById('myUL');
-	li = ul.getElementsByTagName('li');
-		for (i = 0; i < li.length; i++) {
-		a = li[i].getElementsByTagName('a')[0];
-		if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			li[i].style.display = "";
+	a = ul.getElementsByTagName('a');
+		for (i = 0; i < a.length; i++) {
+		li = a[i].getElementsByTagName('li')[0];
+		if (li.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			a[i].style.display = "";
 		} else {
-			li[i].style.display = "none";
+			a[i].style.display = "none";
 		}
 	}
 }
