@@ -203,7 +203,7 @@ html, body {
 }
 
 #myUL a:hover li {
-	background: rgba(46, 158, 55, 1);	
+	background: rgba(46, 158, 55, 0.7);	
 }
 
 .btn-add {
@@ -219,4 +219,24 @@ html, body {
 	position: absolute;
 	bottom: 2%;
 	left: 2%;
+}
+
+.int-name {
+	background: rgba(46, 158, 92, 0.2);
+	border-radius: 15px;
+	color: #6f2e9e;
+	font-size: 26px;
+	margin-left: 3%;
+	padding: 10px;
+	width: 50%;
+}
+
+.int-description {
+	background: rgba(46, 158, 92, 0.2);
+	border-radius: 15px;
+	color: #9e2e5d;
+	font-size: 20px;
+	margin-left: 3%;
+	padding: 10px;
+	width: 50%;
 }
