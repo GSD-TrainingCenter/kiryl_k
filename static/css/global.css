@@ -99,19 +99,40 @@ html, body {
 }
 
 .user-interests {
-	border: solid 1px #000;
+	background: rgba(46, 158, 92, 0.5);
+	border: 1px solid rgba(46, 158, 92, 0.5);
+	border-radius: 20px;
+	margin: 4% auto;
+	padding: 4%;
+	width: 98%;
+}
+
+.user-interests h2 {
+	color: #6f2e9e;
+	font-size: 36px;
+}
+
+.interest-link {
+	color: #9e2e5d;
+	text-decoration: none;
+	margin-left: 5%;
+}
+
+.interest-link:hover {
+	color: #666;
+	text-decoration: none;
 }
 
 #search-bar {
 	margin-top: 20px;
 }
 
-#search-bar > img {
+#search-bar img {
 	width: 30px;
 	height: 30px;
 }
 
-#search-bar > input {
+#search-bar input {
 	font-size: 24px;
 
 	padding: 0 15px;
