@@ -86,8 +86,8 @@ def user_logout(request):
 @login_required
 def update_profile(request):
 	if request.method == 'POST':
-		user_form = UserForm(data=request.POST)
-		profile_form = UserProfileForm(data=request.POST)
+		user_form = UserForm(data=request.POST, instance=request.user)
+		profile_form = UserProfileForm(data=request.POST, instance=request.user)
 
 		if user_form.is_valid() and profile_form.is_valid():
 			user = user_form.save()
