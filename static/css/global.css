@@ -168,7 +168,9 @@ html, body {
 #id_email,
 #id_password,
 #id_fb_account,
-#id_avatar {
+#id_avatar,
+#id_name,
+#id_description {
 	margin: 0 auto;
 	display: block;
 	width: 35%;
@@ -203,4 +205,14 @@ html, body {
 .btn-add {
 	margin-left: 2%;
 	margin-top: 3%;
+}
+
+#id_description {
+	resize: none;
+}
+
+.back-home {
+	position: absolute;
+	bottom: 2%;
+	left: 2%;
 }

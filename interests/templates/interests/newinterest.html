@@ -1,13 +1,45 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-
-<div>
-	<form id='new-interest' method='post' action='/newinterest/' enctype="multipart/form-data">
-		{% csrf_token %}
-
-		{{ new_interest.as_p }}
-		<input type="submit" name="submit" value="Create">
-	</form>	
+				<div id="navbar" class="col-lg-12">
+					<div class="col-lg-2">
+						<a href="/"><img class="logo" src="{% static 'images/logo.png' %}" alt=""></a>
+					</div>
+					<div class="col-lg-5">
+						&nbsp;
+					</div>
+					<div class="col-lg-5">
+						<div class="col-lg-6 text-right">
+							<div class="username">{{ user.username }}</div>
+						</div>
+						<div class="col-lg-2">
+							{% if user.userprofile.avatar == '' %}
+								<img class="avatar" src="{% static 'images/default_avatar.png' %}" alt="">
+							{% else %}
+								<img class="avatar" src="/media/{{ user.userprofile.avatar }}" alt="">
+							{% endif %}
+						</div>
+						<div class="col-lg-4 text-left dropdown">
+ 							<img class="dropbtn" src="{% static 'images/triangle.png' %}" alt="">
+ 							<div class="dropdown-content">
+								<a href="/newinterest/">Add interest</a>
+								<a href="">Change profile</a>
+								<a href="/logout/">Log out</a>
+							</div>
+						</div>
+					</div>
+				</div>
+<div class="container fluid text-center">
+	<div class="row">
+		<div class="col-lg-12">
+			<h2>Add new interest!</h2>
+			<form id='new-interest' method='post' action='/newinterest/' enctype="multipart/form-data">
+				{% csrf_token %}
+				{{ new_interest.as_p }}
+				<input type="submit" name="submit" value="Create" class="btn btn-primary">
+			</form>
+		</div>
+	</div>
 </div>
-
+<a href="/" class="btn btn-danger back-home">Back to home page</a>	
 {% endblock %}
