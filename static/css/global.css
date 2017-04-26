@@ -199,3 +199,8 @@ html, body {
 	color: #9e2e5d;
 	text-decoration: none;
 }
+
+.btn-add {
+	margin-left: 2%;
+	margin-top: 3%;
+}
