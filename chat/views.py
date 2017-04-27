@@ -15,7 +15,7 @@ def post(request):
         c = Chat(user=request.user, message=msg)
         if msg != '':
             c.save()
-        return JsonResponse({ 'msg': msg, 'user': c.user.username })
+            return HttpResponseRedirect('/chat/')
     else:
         return HttpResponse('Request must be POST.')
 
